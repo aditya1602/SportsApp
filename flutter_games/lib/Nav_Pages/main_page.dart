@@ -31,13 +31,14 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       body: pages[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blueAccent,
           type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: onTap,
         selectedFontSize: 0,
         unselectedFontSize: 0,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.black87,
+        unselectedItemColor: Colors.black45,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         elevation: 0,
