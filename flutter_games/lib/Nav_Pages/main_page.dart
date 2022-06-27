@@ -20,11 +20,22 @@ class _MainPageState extends State<MainPage> {
     SearchPage(),
     ProfilePage(),
   ];
+  int currentIndex=0;
+  void onTap(int index){
+    setState(() {
+      currentIndex=index;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[0],
+      body: pages[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        onTap: onTap,
+        selectedFontSize: 0,
+        unselectedFontSize: 0,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,
